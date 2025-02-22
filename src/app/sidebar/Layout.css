@@ -1,0 +1,74 @@
+/* Layout container */
+.layout-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    background-color: #1f2937; /* Gray-800 */
+    color: white;
+    transition: width 0.3s ease;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+   .sidebar-open {
+    width: 16rem; /* 64 Tailwind unit */
+   } 
+   
+  .sidebar-closed {
+    width: 4rem; /* 16 Tailwind unit */
+  }
+  
+  /* Sidebar toggle button */
+  .toggle-button {
+    font-size: 1.25rem; /* text-xl */
+    padding: 1rem; /* p-4 */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Sidebar menu */
+  .sidebar-menu {
+    margin-top: 1rem; /* mt-4 */
+    padding: 0 1rem; /* px-4 */
+    list-style: none;
+  }
+  
+  .sidebar-item {
+    margin-bottom: 1rem; /* space-y-4 */
+  }
+  
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* gap-2 */
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .sidebar-link:hover {
+    color: #9ca3af; /* Hover gray-300 */
+  }
+  
+  .sidebar-label {
+    font-size: 1rem; /* Optional: customize font size */
+  }
+  
+  /* Main content styles */
+  .main-content {
+    flex-grow: 1;
+    background-color: #f3f4f6; /* Gray-100 */
+    padding: 2rem; /* Adjust padding as needed */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    margin-left: -5px;
+  }
+  

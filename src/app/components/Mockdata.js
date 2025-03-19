@@ -1,4 +1,7 @@
-import DataTable from "../datatable/storedata";
+"User client"
+
+
+import DataTable from "./datatable/storedata";
 export const mockLiveScores = [
     { id: 1, team1: 'Team A', team2: 'Team B', score: '150/4' },
     { id: 2, team1: 'Team C', team2: 'Team D', score: '120/3' },
@@ -6,5 +9,5 @@ export const mockLiveScores = [
     { id: 4, team1: 'Team G', team2: 'Team H', score: '90/2' },
   ];
 
-<DataTable data={mockLiveScores}/>
+<DataTable data={mockdata}/>
   

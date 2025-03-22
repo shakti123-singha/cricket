@@ -1,5 +1,3 @@
-
-
 import {  mockdata } from './Mockdata';  // Correct import
 import Card from './page';
 import { MdOutlineScoreboard } from 'react-icons/md';

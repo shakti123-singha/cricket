@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { FaBars } from "react-icons/fa6";
 import {
   MdOutlineScoreboard,
@@ -29,19 +28,19 @@ export default function Layout() {
         </button>
         <ul className="sidebar-menu">
           {[
-            { href: '/livescore', icon: <MdOutlineScoreboard />, label: 'Live Score' },
-            { href: '/commentary', icon: <TbLivePhoto />, label: 'Commentary' },
-            { href: '/latest-news', icon: <IoNewspaperOutline />, label: 'Latest News' },
-            { href: '/records', icon: <MdSchedule />, label: 'Records' },
-            { href: '/ranking', icon: <MdLeaderboard />, label: 'Ranking' },
-            { href: '/upcoming', icon: <MdUpcoming />, label: 'Upcoming Matches' },
-            { href: '/status', icon: <MdOutlineSignalWifiStatusbar4Bar />, label: 'Status' },
-          ].map(({ href, icon, label }) => (
-            <li key={href} className="sidebar-item">
-              <Link href={href} className="sidebar-link flex items-center text-yellow-100 hover:text-yellow-300">
+            { id: "live-score", icon: <MdOutlineScoreboard />, label: "Live Score" },
+            { id: "commentary", icon: <TbLivePhoto />, label: "Commentary" },
+            { id: "latest-news", icon: <IoNewspaperOutline />, label: "Latest News" },
+            { id: "records", icon: <MdSchedule />, label: "Records" },
+            { id: "ranking", icon: <MdLeaderboard />, label: "Ranking" },
+            { id: "upcoming-matches", icon: <MdUpcoming />, label: "Upcoming Matches" },
+            { id: "status", icon: <MdOutlineSignalWifiStatusbar4Bar />, label: "Status" },
+          ].map(({ id, icon, label }) => (
+            <li key={id} className="sidebar-item">
+              <div className="sidebar-link flex items-center text-yellow-100">
                 {icon}
                 {isSidebarOpen && <span className="sidebar-label ml-2">{label}</span>}
-              </Link>
+              </div>
             </li>
           ))}
         </ul>
